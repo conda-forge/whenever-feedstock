@@ -32,6 +32,7 @@ test:
 
 about:
   home: https://github.com/ariebovenberg/whenever
+  doc_url: https://whenever.readthedocs.io/en/latest/
   summary: Foolproof datetimes for maintainable code
   license: MIT
   license_file: LICENSE
