@@ -1,5 +1,5 @@
 {% set name = "whenever" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/whenever-{{ version }}.tar.gz
-  sha256: 352beb5de175b76ecd16bb80932f33ecd3278d86f44815f3b1205aade9bbf567
+  sha256: 828826c07e516316973e578b6cf413f80b68eb9eb9825dc00d46065ca0bef571
 
 build:
   noarch: python
@@ -32,6 +32,7 @@ test:
 
 about:
   home: https://github.com/ariebovenberg/whenever
+  doc_url: https://whenever.readthedocs.io/en/latest/
   summary: Foolproof datetimes for maintainable code
   license: MIT
   license_file: LICENSE
