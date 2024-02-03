@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: Foolproof datetimes for maintainable code
 
+Documentation: https://whenever.readthedocs.io/en/latest/
+
 Current build status
 ====================
 
