@@ -21,6 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.9,<4.0
+    - tzdata >=2020.1
 
 test:
   imports:
