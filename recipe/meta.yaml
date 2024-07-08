@@ -31,7 +31,8 @@ test:
   imports:
     - whenever
   commands:
-    - pip check
+    # only do pip check with linux and osx because somehow it fails to detect tzdata even though it's clearly installed on win builds
+    - pip check  # [not win]
   requires:
     - pip
 
