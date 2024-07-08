@@ -10,18 +10,22 @@ source:
   sha256: 19e4b4ce78622195966c8051b66ae002ccbc94b0b9f3471aced6c3998cf159dd
 
 build:
-  noarch: python
+  skip: True  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('rust) }}
   host:
-    - python >=3.9
+    - python
     - setuptools-rust
     - pip
   run:
-    - python >=3.9
-    - tzdata >=2020.1
+    - python
+    - tzdata >=2020.1  # [win]
 
 test:
   imports:
