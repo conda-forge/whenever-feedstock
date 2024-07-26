@@ -21,7 +21,7 @@ requirements:
     - {{ compiler('rust') }}
   host:
     - python
-    - setuptools-rust
+    - setuptools-rust >=1.9
     - pip
   run:
     - python
