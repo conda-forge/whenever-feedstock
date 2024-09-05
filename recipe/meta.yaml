@@ -1,5 +1,5 @@
 {% set name = "whenever" %}
-{% set version = "0.6.7" %}
+{% set version = "0.6.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/whenever-{{ version }}.tar.gz
-  sha256: 6c8fe69ce1dc0c3161b2f02e5b690c3407b1726e942351a507988234567b633a
+  sha256: 327ad72625191af21c0e7039dab316e364162916de4fa0dca4ee8a91d266c8b1
 
 build:
   skip: true  # [py<39]
@@ -23,6 +23,7 @@ requirements:
     - python
     - setuptools-rust >=1.9
     - pip
+    - setuptools
   run:
     - python
     - tzdata >=2020.1  # [win]
