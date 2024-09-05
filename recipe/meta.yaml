@@ -23,6 +23,7 @@ requirements:
     - python
     - setuptools-rust >=1.9
     - pip
+    - setuptools
   run:
     - python
     - tzdata >=2020.1  # [win]
