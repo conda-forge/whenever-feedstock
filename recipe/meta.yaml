@@ -24,6 +24,7 @@ requirements:
     - setuptools-rust >=1.9
     - pip
     - setuptools
+    - wheel
   run:
     - python
     - tzdata >=2020.1  # [win]
