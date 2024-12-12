@@ -1,5 +1,5 @@
 {% set name = "whenever" %}
-{% set version = "0.6.14" %}
+{% set version = "0.6.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/whenever-{{ version }}.tar.gz
-  sha256: c31d083544e8235f41c078f6395800cf2b4ea220a27b3860f2e827850db648c6
+  sha256: d2752a4d6d7f05df0ab07c276fbb831f10d83846d9fdb1b9f53885ba911d5a23
 
 build:
   skip: true  # [py<39]
