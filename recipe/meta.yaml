@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/whenever-{{ version }}.tar.gz
-  sha256: afdf81c30b229255398e7153bb94673d2be366397e6a57f44cea51815bbba315
+  url: https://github.com/ariebovenberg/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 0355be01b73dd369eca2a3bdc1e51305bf1511d6ddc34ccd7b2e15d20639f5a7
 
 build:
   skip: true  # [py<39]
