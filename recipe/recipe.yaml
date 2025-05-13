@@ -1,0 +1,63 @@
+schema_version: 1
+
+context:
+  name: whenever
+  version: 0.8.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/ariebovenberg/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
+  sha256: 0355be01b73dd369eca2a3bdc1e51305bf1511d6ddc34ccd7b2e15d20639f5a7
+
+build:
+  number: 0
+  skip: match(python, "<3.9")
+  script:
+    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  build:
+    - ${{ stdlib('c') }}
+    - ${{ compiler('c') }}
+    - ${{ compiler('rust') }}
+    - cargo-bundle-licenses
+  host:
+    - python
+    - setuptools-rust >=1.9
+    - pip
+    - setuptools
+    - wheel
+  run:
+    - python
+    - if: win
+      then: tzdata >=2020.1
+
+tests:
+  - if: not win
+    then:
+      - python:
+          imports:
+            - whenever
+          pip_check: true
+    else:
+      - python:
+          imports:
+            - whenever
+          pip_check: false
+
+about:
+  summary: Foolproof datetimes for maintainable code
+  license: MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  homepage: https://github.com/ariebovenberg/whenever
+  documentation: https://whenever.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - thewchan
