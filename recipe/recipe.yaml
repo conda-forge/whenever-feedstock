@@ -40,10 +40,12 @@ tests:
   - python:
       imports:
         - whenever
-        - if: not win
-          then:
-            pip_check: true
-  
+  - requirements:
+      run:
+        - pip
+    script:
+      - if: not win
+        then: pip check
 
 about:
   summary: Foolproof datetimes for maintainable code
