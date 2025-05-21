@@ -34,21 +34,14 @@ requirements:
   run:
     - python
     - if: win
-      then: tzdata >=2020.1
+      then: python-tzdata >=2020.1
 
 tests:
-  - if: not win
-    then:
-      - python:
-          imports:
-            - whenever
-          pip_check: true
-    else:
-      - python:
-          imports:
-            - whenever
-          pip_check: false
-
+  - python:
+      imports:
+        - whenever
+      pip_check: true
+    
 about:
   summary: Foolproof datetimes for maintainable code
   license: MIT
