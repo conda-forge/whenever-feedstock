@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: whenever
-  version: "0.8.1"
+  version: "0.8.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/ariebovenberg/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 8b1184a0b00b954d5e7f2f309139a09a480b110890a56765d6e798ad8b7e98a9
+  sha256: 8784b6258a77c915edc5ea79bd1280ae178e1cdfac933913bdb5aa142dfa3277
 
 build:
   number: 0
@@ -41,7 +41,7 @@ tests:
       imports:
         - whenever
       pip_check: true
-    
+
 about:
   summary: Foolproof datetimes for maintainable code
   license: MIT
