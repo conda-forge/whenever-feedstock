@@ -27,7 +27,6 @@ requirements:
     - cargo-bundle-licenses
   host:
     - python
-    - setuptools-rust >=1.9
     - pip
     - setuptools
     - wheel
