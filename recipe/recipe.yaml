@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: whenever
-  version: "0.8.4"
+  version: "0.8.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/ariebovenberg/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: b075a6641ee67d77f638cfe144bfc0c9ecaf59846bc1702b49579f1abe02b3e2
+  sha256: fff27002495c9223021088d889589eb0844a1e94a96329081d14f83e499e4c89
 
 build:
   number: 0
