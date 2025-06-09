@@ -30,6 +30,7 @@ requirements:
     - pip
     - setuptools
     - wheel
+    - setuptools-rust >=1.9
   run:
     - python
     - if: win
