@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: whenever
-  version: "0.8.8"
+  version: "0.8.9"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/ariebovenberg/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 172b86a7843f68b4c132f0f70c14fddb05c13938a6b354b51bd7a2a2b66a47e0
+  sha256: c0a1fd4918e2417604cb3cb611255ffc2b37dbee4e40ccf555cd9668974c2adc
 
 build:
-  number: 1
+  number: 0
   skip: match(python, "<3.9")
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
