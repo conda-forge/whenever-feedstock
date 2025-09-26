@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/ariebovenberg/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: c0a1fd4918e2417604cb3cb611255ffc2b37dbee4e40ccf555cd9668974c2adc
+  sha256: 1998c895fba1cf6411c36dbb7f3915f0e28607c4038042c6aca5aa0b96ee6f53
 
 build:
   number: 0
