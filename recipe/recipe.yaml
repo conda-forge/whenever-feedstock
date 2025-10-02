@@ -38,7 +38,9 @@ requirements:
   run:
     - python
     - if: win
-      then: python-tzdata >=2020.1
+      then:
+        - python-tzdata >=2020.1
+        - tzlocal >=4.0
 
 tests:
   - python:
