@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: whenever
-  version: "0.8.9"
+  version: "0.9.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/ariebovenberg/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 1998c895fba1cf6411c36dbb7f3915f0e28607c4038042c6aca5aa0b96ee6f53
+  sha256: e7ad298bf9a532c098124f3739512d051769dd872cfb0084837f62cc33c8a3bb
 
 build:
   number: 0
@@ -38,7 +38,9 @@ requirements:
   run:
     - python
     - if: win
-      then: python-tzdata >=2020.1
+      then:
+        - python-tzdata >=2020.1
+        - tzlocal >=4.0
 
 tests:
   - python:
