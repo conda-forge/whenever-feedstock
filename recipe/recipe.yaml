@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: whenever
-  version: "0.10.5"
+  version: "0.11.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/ariebovenberg/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: eb7e365f3cdd1b9def507f487f86b471e21b4abd9c18d45169e467e9d8d28609
+  sha256: 2c40755c1ad5416f60b3786288a9a64dc3c7b2c88d3d19292629da9f17565536
 
 build:
-  number: 1
+  number: 0
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
